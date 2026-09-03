@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Ley 21.719 — Indicios de Cumplimiento",
+  "version": "1.2.0",
+  "description": "Indicios de transparencia y formularios/datos sensibles según Ley N° 21.719 (Chile). Por Mauricio Durán Torres. No constituye certificación.",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Ley 21.719 — Indicios web"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

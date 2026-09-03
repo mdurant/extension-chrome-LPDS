@@ -1,0 +1,79 @@
+LICENCIA DUAL MDT — Ley 21.719 Indicios de Cumplimiento
+Copyright (c) 2026 Mauricio Durán Torres <mauriciodurant@gmail.com>
+Todos los derechos reservados, salvo las autorizaciones expresas de este texto.
+
+==============================================================================
+¿POR QUÉ ESTA LICENCIA Y NO MIT / GPL / Apache?
+==============================================================================
+- MIT / Apache 2.0: permiten uso comercial casi sin contraprestación; no
+  sirven si se quiere un fee institucional claro.
+- GPL / AGPL: obligan a compartir mejoras bajo copyleft; útil para software
+  libre comunitario, pero chocan con un modelo de licencia de uso paga para
+  Estado y gran empresa.
+- La figura que mejor calza aquí es una LICENCIA PROPIETARIA DE USO CON
+  DOBLE VÍA (comunitaria + comercial institucional), cercana en espíritu a
+  modelos “Fair Source / Source Available”, pero redactada a medida para Chile.
+
+En corto: el código se puede ver y adaptar con reglas; el uso por Gobierno o
+gran empresa en Chile requiere licencia comercial paga.
+
+==============================================================================
+1) LICENCIA COMUNITARIA (gratuita)
+==============================================================================
+Se otorga de forma gratuita, no exclusiva e intransferible a:
+
+a) Personas naturales (uso personal, estudio o portafolio);
+b) Micro, pequeñas y medianas empresas (MiPyme) según categorías de la
+   Ley N° 20.416 (o la que la reemplace);
+c) Organizaciones sin fines de lucro, universidades y centros de formación,
+   para fines educativos o de investigación no comercial a gran escala.
+
+Bajo esta vía usted puede: usar, copiar, modificar y desplegar internamente
+la extensión, manteniendo avisos de autoría y esta licencia.
+
+No puede: sublicenciarla como producto propio de pago a terceros; eliminar la
+dedicatoria / créditos del autor; ni usarla bajo el supuesto gratuito si es
+Gobierno o gran empresa en Chile (ver sección 2).
+
+==============================================================================
+2) LICENCIA COMERCIAL INSTITUCIONAL (onerous — fee mensual)
+==============================================================================
+Obligatoria para:
+
+a) Órganos de la Administración del Estado, municipalidades, empresas
+   públicas y demás entidades del sector público chileno;
+b) Grandes empresas constituidas o que operen en Chile que no califiquen
+   como empresa de menor tamaño conforme a la Ley N° 20.416.
+
+Fee: 0,2 UF (Unidades de Fomento) mensuales por organización usuaria,
+a nombre del desarrollador e informático Mauricio Durán Torres.
+
+El pago otorga licencia de uso interno no exclusivo para la organización
+licenciada, actualizaciones menores razonables según acuerdo, y derecho a
+personalizar el código para su operación, sin adquirir la titularidad del
+copyright.
+
+Contacto comercial / facturación / convenio:
+  Mauricio Durán Torres — mauriciodurant@gmail.com
+
+Sin pago vigente o convenio escrito, el uso institucional descrito en esta
+sección no está autorizado.
+
+==============================================================================
+3) LIMITACIÓN DE RESPONSABILIDAD
+==============================================================================
+ESTE SOFTWARE ENTREGA INDICIOS HEURÍSTICOS. NO CONSTITUYE ASESORÍA LEGAL,
+DICTAMEN DE CUMPLIMIENTO NI CERTIFICACIÓN ANTE LA AGENCIA DE PROTECCIÓN DE
+DATOS PERSONALES U OTRA AUTORIDAD. SE ENTREGA “TAL CUAL”, SIN GARANTÍAS
+EXPRESS O IMPLÍCITAS. EL AUTOR NO RESPONDE POR DAÑOS INDIRECTOS, LUCRO
+CESANTE NI MULTAS DERIVADAS DEL USO O INTERPRETACIÓN DE LOS RESULTADOS.
+
+==============================================================================
+4) CRÉDITOS Y DEDICATORIA (obligatorios en la UI)
+==============================================================================
+Debe mantenerse visible, en el pie de la extensión o equivalente:
+
+  «Para la Enana con amor de su papí ❤️»
+  Mauricio dedica este proyecto a su hija Fernanda Durán.
+
+Autor: Mauricio Durán Torres — mauriciodurant@gmail.com
