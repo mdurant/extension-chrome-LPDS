@@ -45,6 +45,85 @@ Si la página pide correo, RUT, salud, tarjeta, etc., la extensión te avisa y s
 
 ---
 
+## Chrome Web Store — Prácticas de privacidad (checklist de publicación)
+
+Al publicar o actualizar el elemento en la Chrome Web Store, completa la pestaña **Prácticas de privacidad** con lo siguiente. Guarda el borrador cuando termines.
+
+### 1) Descripción de la finalidad única (obligatorio)
+
+**Texto sugerido (copiar/pegar):**
+
+> Analizar indicios visibles de transparencia y tratamiento de datos personales en la pestaña activa del navegador (HTTPS, política de privacidad, cookies/consentimiento, canales ARCOP y formularios), alineado a la Ley N° 21.719 de Chile. No recolecta ni transmite datos del usuario a servidores externos; el análisis ocurre localmente en el navegador.
+
+### 2) Justificación del permiso `activeTab` (obligatorio)
+
+**Texto sugerido:**
+
+> Se usa `activeTab` para acceder únicamente a la pestaña que el usuario tiene abierta y en la que hace clic en la extensión. Así se puede leer el contenido visible de esa página y mostrar el resultado del análisis de indicios de cumplimiento. No se usa para espiar otras pestañas en segundo plano.
+
+### 3) Justificación del permiso `scripting` (obligatorio)
+
+**Texto sugerido:**
+
+> Se usa `scripting` para inyectar o ejecutar el script de análisis (`content.js`) en la pestaña activa cuando el usuario abre el popup. Esto permite escanear el DOM/HTML visible (enlaces de privacidad, banners de cookies, formularios, etc.) y devolver el informe al popup. El script es propio de la extensión y solo corre en respuesta a la acción del usuario o al content script declarado.
+
+### 4) Justificación del uso de código remoto (obligatorio)
+
+**Texto sugerido:**
+
+> Esta extensión **no utiliza código remoto**. Todo el JavaScript (`background.js`, `content.js`, `popup.js`) se empaqueta localmente en el elemento. No se descargan ni ejecutan scripts desde CDN, servidores externos ni URLs dinámicas. El análisis se realiza íntegramente en el cliente.
+
+> Si la consola de publicación pide igualmente una justificación: indícalo explícitamente como “No remote code / No se usa código remoto” y confirma que no hay `eval`, ni carga de JS externo.
+
+### 5) Justificación del permiso de host (obligatorio)
+
+**Contexto técnico:** el `content_scripts` declara `matches: ["http://*/*", "https://*/*"]`, lo que equivale a acceso amplio a hosts http(s).
+
+**Texto sugerido:**
+
+> El permiso de host sobre `http://*/*` y `https://*/*` es necesario porque la finalidad de la extensión es evaluar **cualquier sitio web** que el usuario visite (empresas, gobierno, proveedores, landings). El content script solo analiza la página actual para detectar indicios de transparencia y formularios; no modifica el sitio ni envía su contenido a terceros. Sin este alcance, no podría usarse como herramienta de revisión transversal de cumplimiento web.
+
+### 6) Certificación de uso de datos / Políticas del Programa para Desarrolladores (obligatorio)
+
+Marca en la pestaña **Prácticas de privacidad** que certificas el cumplimiento de las [Políticas del Programa para Desarrolladores de Chrome Web Store](https://developer.chrome.com/docs/webstore/program-policies/).
+
+**Declaración sugerida (para tu registro interno / campo de privacidad):**
+
+> Certifico que el uso de datos de esta extensión cumple las Políticas del Programa para Desarrolladores de Chrome Web Store. La extensión:
+>
+> - Tiene una **única finalidad**: análisis local de indicios de cumplimiento/transparencia en la página activa.
+> - **No vende** datos de usuario.
+> - **No usa** datos para publicidad personalizada ni tracking de terceros.
+> - **No transmite** el contenido de las páginas ni datos personales del usuario a servidores del desarrollador.
+> - Solo procesa en memoria local del navegador lo necesario para mostrar el informe en el popup.
+> - Política de privacidad / contacto del desarrollador: Mauricio Durán Torres — mauriciodurant@gmail.com
+
+### Checklist rápido antes de guardar el borrador
+
+- [ ] Finalidad única completada
+- [ ] Justificación `activeTab`
+- [ ] Justificación `scripting`
+- [ ] Justificación de código remoto (**indicar que no se usa**)
+- [ ] Justificación de permiso de host (`http(s)://*/*`)
+- [ ] Certificación de Políticas del Programa marcada
+- [ ] URL de **Política de Privacidad** cargada (ver archivo [`POLITICA-DE-PRIVACIDAD.md`](./POLITICA-DE-PRIVACIDAD.md))
+- [ ] Borrador **guardado**
+
+**URL sugerida para el campo “Privacy policy” en Chrome Web Store:**  
+`https://github.com/mdurant/extension-chrome-LPDS/blob/main/POLITICA-DE-PRIVACIDAD.md`
+
+---
+
+## Política de Privacidad (Chile)
+
+La política completa, redactada en estándar chileno (Ley 19.628 / Ley 21.719) y alineada a Chrome Web Store, está en:
+
+📄 [`POLITICA-DE-PRIVACIDAD.md`](./POLITICA-DE-PRIVACIDAD.md)
+
+Incluye: responsable, finalidad única, qué se trata y qué **no** se recoge, bases de licitud, permisos, conservación, seguridad, derechos ARCOP, contacto y URL pública.
+
+---
+
 ## Licencia (cuál calza mejor y por qué)
 
 **Se usa una Licencia Dual MDT (propietaria / source-available), no MIT ni GPL.**
@@ -169,6 +248,7 @@ extension-chrome-21719/
 ├── popup.html         ← interfaz
 ├── popup.js           ← pinta resultados
 ├── LICENSE            ← Licencia Dual MDT + fee 0,2 UF
+├── POLITICA-DE-PRIVACIDAD.md ← Política de Privacidad (Chile / CWS)
 ├── README.md          ← esta guía
 └── Ley-21719_....pdf  ← norma de referencia
 ```
